@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_maroon"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="5dp"
+        android:paddingTop="10dp"
+        android:text="Please enter source and destination City Code :"
+        android:textAlignment="center"
+        android:textColor="#ffff"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_maroon"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:textAlignment="center"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightMaroon"
+            android:hint="SRC"
+            android:padding="5dp"
+            android:layout_marginRight="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey" />
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:minWidth="5dp"-->
+            <!--android:background="@drawable/gradient_maroon"-->
+            <!--android:layout_weight="2">-->
+
+        <!--</LinearLayout>-->
+
+        <!--<view-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingLeft="2dp"-->
+            <!--android:paddingRight="2dp"-->
+            <!--android:layout_weight="2"/>-->
+
+        <EditText
+            android:id="@+id/destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightMaroon"
+            android:hint="DST"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_maroon"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:textAlignment="center"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:text="SEARCH"
+            android:textColor="@color/white"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<TextView-->
+        <!--android:id="@+id/searchResult"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="10dp"-->
+        <!--android:visibility="invisible"/>-->
+        <!--</ScrollView>-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/error_message_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:paddingLeft="20dp"
+        android:text="@string/err_msg_generic"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+</LinearLayout>

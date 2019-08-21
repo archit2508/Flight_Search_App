@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ixigo</string>
+    <string name="err_msg_field_cannot_be_empty">Source or Destination cannot be empty</string>
+    <string name="err_msg_generic">Something went wrong, please try again.</string>
+    <string name="action_sort_at">Sort by Arrival time</string>
+    <string name="action_sort_dp">Sort by Departure time</string>
+    <string name="action_sort_fare">Sort by fare</string>
+</resources>
